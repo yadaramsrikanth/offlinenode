@@ -10,6 +10,8 @@ let db=null
 const jwt=require("jsonwebtoken")
 const { error } = require("console")
 app.use(express.json())
+const cors=require("cors")
+app.use(cors({origin:"*"}))
 const initializeDBAndServer=async()=>{
     try{
         db=await open({
