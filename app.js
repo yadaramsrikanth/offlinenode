@@ -11,7 +11,7 @@ const jwt=require("jsonwebtoken")
 
 app.use(express.json())
 const cors=require("cors")
-console.log(123)
+app.use(cors({origin:"*"}))
 
 const initializeDBAndServer=async()=>{
     try{
