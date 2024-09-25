@@ -3,12 +3,12 @@ const app=express()
 const {open}=require("sqlite")
 const path=require("path")
 const sqlite3 = require("sqlite3")
-const { request } = require("http")
+
 const dbPath=path.join(__dirname,"info.db")
 const bcrypt=require("bcrypt")
 let db=null
 const jwt=require("jsonwebtoken")
-const { error } = require("console")
+
 app.use(express.json())
 const cors=require("cors")
 app.use(cors({origin:"*"}))
